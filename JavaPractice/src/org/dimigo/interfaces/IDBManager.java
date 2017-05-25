@@ -25,9 +25,9 @@ public interface IDBManager {
 	void delete();
 	
 	public static IDBManager getDBObject (String database) {
-		if("SYBASE".equals(database)) {
+		if(SYBASE_DATABASE.equals(database)) {
 			return new SybaseDB();
-		} else if("ORACLE".equals(database)) {
+		} else if(ORACLE_DATABASE.equals(database)) {
 			return new OracleDB();
 		}
 		return null;
